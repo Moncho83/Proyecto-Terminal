@@ -4,27 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- SEO -->
-    <meta name="description" content="Portfolio interactivo de Juana Zabaleta, diseñadora y desarrolladora frontend.">
-    <meta name="keywords" content="Juana Zabaleta, portfolio, desarrolladora frontend, diseño UX/UI, programación web, proyectos">
-    <meta name="author" content="Juana Zabaleta">
+    <meta name="description" content="Portfolio interactivo de Ramón Moreno, CEO en Trae.">
+    <meta name="keywords" content="Ramón Moreno, portfolio, ceo, diseño UX/UI, programación, proyectos">
+    <meta name="author" content="Ramón Moreno">
   
-    <!-- Open Graph / Facebook -->
-    <meta property="og:title" content="Juana Zabaleta – Portfolio">
-    <meta property="og:description" content="Explorá el portfolio interactivo de Juana, donde diseño y desarrollo se fusionan.">
-    <meta property="og:image" content="https://juanazabaleta.com.ar/imagen-preview.jpg">
-    <meta property="og:url" content="https://juanazabaleta.com.ar">
-    <meta property="og:type" content="website">
-  
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Juana Zabaleta – Portfolio">
-    <meta name="twitter:description" content="Explorá el portfolio interactivo de Juana, donde diseño y desarrollo se fusionan.">
-    <meta name="twitter:image" content="https://juanazabaleta.com.ar/imagen-preview.jpg">
-  
-    <!-- Favicon -->
+        <!-- Favicon -->
     <link rel="icon" href="assets/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="./assets/output.css">
-    <title>Juana Zabaleta | Portfolio interactivo</title>
+    <title>Ramón Moreno | Portfolio interactivo</title>
 </head>
 <body class="font-mono bg-slate-500 px-5 py-10 flex flex-col align-middle justify-center items-center">
 
@@ -36,7 +23,7 @@
       </div>
   
       <p class="absolute text-white left-1/2 transform -translate-x-1/2 text-xs font-medium">
-        juana@portfolio -zsh
+        ramon@portfolio -zsh
       </p>
   </div>
   
@@ -66,7 +53,7 @@
 const inicio = `
   <div class="flex flex-col" id="output"></div>
   <div class="flex items-center">
-    <p class="text-white text-xs  font-medium mr-2 mb-1">$ juana@portfolio ~ %</p>
+    <p class="text-white text-xs  font-medium mr-2 mb-1">$ ramon@portfolio ~ %</p>
     <input 
       type="text" 
       class="mb-1 bg-transparent border-none outline-none text-white text-xs font-light flex-1 w-full" 
@@ -117,7 +104,7 @@ function initTerminalEvents() {
     if (e.key === 'Enter') {
       const comando = input.value.trim().toLowerCase();
 
-      if (comando === 'juana limpiar') {
+      if (comando === 'ramon limpiar') {
         espacioTerminal.innerHTML = inicio;
         command_history = [];
         historyIndex = -1;
@@ -128,12 +115,12 @@ function initTerminalEvents() {
 
       output.innerHTML += `
         <div class="flex items-center">
-          <p class="mb-1 text-white text-xs font-medium mr-2">$ juana@portfolio ~ %</p>
+          <p class="mb-1 text-white text-xs font-medium mr-2">$ ramon@portfolio ~ %</p>
           <p class="mb-1 text-white text-xs font-medium text-left">${comando}</p>
         </div>
       `;
       switch (comando) {
-        case 'juana proyectos':
+        case 'ramon proyectos':
           output.innerHTML += `
             <div class="text-white text-xs mb-1 ">
               <ul class="list-none">
@@ -143,31 +130,31 @@ function initTerminalEvents() {
             </div>
           `;
           break;
-        case 'juana light':
+        case 'ramon light':
            isLightTheme = true;
            localStorage.setItem('isLightTheme', 'true');
            document.documentElement.classList.remove('dark');
            document.documentElement.classList.add('light');
            break;
-        case 'juana info':
+        case 'ramon info':
           output.innerHTML += `
             <div class="text-white text-xs mb-1 ">
-              <p>Soy Juana Zabaleta, desarrolladora Front-End apasionada por crear soluciones innovadoras y de alta calidad. Me enfoco en la colaboración efectiva y la resolución de problemas, siempre buscando mejorar la experiencia del usuario. </p>
+              <p>Soy Ramón Moreno, desarrollador Front-End apasionado por crear interfaces funcionales, atractivas y orientadas al usuario. Me especializo en transformar ideas en experiencias digitales intuitivas, con un enfoque en la calidad, la innovación y la colaboración efectiva. Siempre busco mejorar los procesos, optimizar el rendimiento y aportar soluciones que marquen la diferencia. </p>
             </div>
           `;
           break;
-        case 'juana ayuda':
+        case 'ramon ayuda':
           output.innerHTML += `
             <div class="text-white font-light text-xs mb-1 ">
               <div class="text-white font-light text-xs mb-1 break-words">
                <ul>
-                  <li>juana proyectos: <i>listado de todos los proyectos en los que trabajé</i></li>
-                  <li>juana info: <i> un poco sobre mí</i></li>
-                  <li>juana contacto:<i> mis vías de contacto</i></li>
-                  <li>juana cv: <i>mi currículum actualizado</i></li>
-                  <li>juana portfolio completo: <i>mi portfolio completo</i></li>
-                  <li>juana habla: <i>los idiomas que hablo</i></li>
-                  <li>juana limpiar: <i>para limpiar la consola</i></li>
+                  <li>ramon proyectos: <i>listado de todos los proyectos en los que trabajé</i></li>
+                  <li>ramon info: <i> un poco sobre mí</i></li>
+                  <li>ramon contacto:<i> mis vías de contacto</i></li>
+                  <li>ramon cv: <i>mi currículum actualizado</i></li>
+                  <li>ramon portfolio completo: <i>mi portfolio completo</i></li>
+                  <li>ramon habla: <i>los idiomas que hablo</i></li>
+                  <li>ramon limpiar: <i>para limpiar la consola</i></li>
                 </ul>
 
               </div>
@@ -175,61 +162,61 @@ function initTerminalEvents() {
             </div>
           `;
           break;
-        case 'juana contacto':
+        case 'ramon contacto':
           output.innerHTML += `
             <div class="text-white text-xs mb-1">
-              <p>Email: <a href="mailto:jjjuanazabaleta@gmail.com" target="_blank" class="underline text-white">jjuanazabaleta@gmail.com</a></p>
-              <p>LinkedIn: <a href="https://linkedin.com/in/juanazabaleta" target="_blank" class="underline text-white">linkedin.com/in/juanazabaleta</a></p>
-              <p>GitHub: <a href="https://github.com/juaana" target="_blank" class="underline text-white">github.com/juaana</a></p>
+              <p>Email: <a href="mailto:r.moreno@trae.es" target="_blank" class="underline text-white">r.moreno@trae.es</a></p>
+              <p>LinkedIn: <a href="https://linkedin.com/in/ramon-moreno" target="_blank" class="underline text-white">linkedin.com/in/ramon-moreno</a></p>
+       
             </div>
           `;
           break;
-        case 'juana cv':
+        case 'ramon cv':
           output.innerHTML += `
             <div class="text-white text-xs mb-1">
               <p>Visita mi CV actualizado en mi 
-                <a href="https://cv-juanazabaleta.netlify.app/" target="_blank" rel="noopener noreferrer" class="underline text-white">
+                <a href="" target="_blank" rel="noopener noreferrer" class="underline text-white">
                  CV</a>
                 en línea
               </p>
             </div>
           `;
           break;
-        case 'juana portfolio completo':
+        case 'ramon portfolio completo':
           output.innerHTML += `
             <div class="text-white font-light text-xs mb-1">
                <p> Visita mi portfolio completo en 
-               <a href="https://juanazabaleta.com.ar/" target="_blank" rel="noopener noreferrer" class="underline text-white">
-                 www.juanazabaleta.com.ar</a>
+               <a href="https://trae.es/" target="_blank" rel="noopener noreferrer" class="underline text-white">
+                 www.trae.es</a>
               </p>
             </div>
           `;
           break;
-        case 'juana estudios':
+        case 'ramon estudios':
           output.innerHTML += `
             <div class="text-white text-xs mb-1 break-words">
               <ul class="list-none gap-1">
-                <li>Analista en TIC – Universidad Nacional de La Plata </li>
-                <li>JavaScript – Coderhouse</li>
-                <li>Desarrollo Web – Coderhouse</li>
-                <li>Diseño UX/UI – Coderhouse</li>
+                <li>Analista SEO – Universidad Nacional UNED </li>
+                <li>JavaScript – Universidad Nacional UNED</li>
+                <li>Desarrollo Web – Universidad Nacional UNED</li>
+              
               </ul>
             </div>
           `;
           break;
-        case 'juana habla':
+        case 'ramon habla':
           output.innerHTML += `
             <div class="text-white text-xs mb-1">
               <p>Español nativo</p>
               <p>Ingles - C1</p>
-              <p>Alemán B2</p>
+              
             </div>
           `;
           break;
         default:
           output.innerHTML += `
             <div class="text-white text-xs mb-1 ">
-              <p>zsh: comando no encontrado: ${comando}<br> Usa <i>juana ayuda</i> para ver los comandos </p>
+              <p>zsh: comando no encontrado: ${comando}<br> Usa <i>ramon ayuda</i> para ver los comandos </p>
             </div>
           `;
       }
